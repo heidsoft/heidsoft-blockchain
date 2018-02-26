@@ -1,6 +1,7 @@
 const SHA256 = require('crypto-js/sha256');
 
 class Block {
+    //构造区块
     constructor(index, timestamp, data, previousHash = '') {
         this.index = index;
         this.timestamp = timestamp;
