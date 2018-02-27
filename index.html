@@ -1,0 +1,40 @@
+<html>
+  <head>
+     <title>Introduction to Dapps. Simple MetaMask example.</title>
+  </head>
+  <body>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut vestibulum diam. Nam varius eros eu dui molestie, et dignissim orci pellentesque. Praesent in ultrices magna. Fusce placerat eu nibh ut maximus. Nulla laoreet diam ac est congue, et varius ligula sollicitudin. Donec eu mi et sem hendrerit rhoncus vitae eu quam. Phasellus dictum congue erat. Etiam rutrum vel est eget mollis. Praesent volutpat turpis mi, id molestie sapien auctor consequat. Aenean laoreet elit ut lacus suscipit, sit amet fringilla orci dictum. Nam eget rhoncus neque. Vestibulum blandit eu ex a mattis.
+  </p>
+  <div id="meta-mask-required"></div>
+  <fieldset>
+    <label> Ether:
+      <input type="text" id="amount"></input>
+    </label>
+    <button onclick="send()">Donate to the Author</button>
+    <div id="response"></div>
+  </fieldset>
+
+  <script>
+    // MetaMask injects the web3 library for us.
+    window.onload = function() {
+      if (typeof web3 === 'undefined') {
+        document.getElementById('meta-mask-required').innerHTML = 'You need <a href="https://metamask.io/">MetaMask</a> browser plugin to run this example'
+      }
+    }
+    function send() {
+      web3.eth.sendTransaction({
+        from: web3.eth.coinbase,
+        to: '0xE767aEB31dAAF66366999F72FB5De2CEEA76c277',
+        value: web3.toWei(document.getElementById("amount").value, 'ether')
+      }, function(error, result) {
+        if (!error) {
+          document.getElementById('response').innerHTML = 'Success: <a href="https://testnet.etherscan.io/tx/' + result + '"> View Transaction </a>'
+        } else {
+          document.getElementById('response').innerHTML = '<pre>' + error + '</pre>'
+        }
+      })
+    }
+  </script>
+  </body>
+</html>
