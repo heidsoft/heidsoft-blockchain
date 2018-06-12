@@ -1,0 +1,124 @@
+2018-04-27 03:54:20.760 UTC [chaincode] sendExecuteMessage -> DEBU 97a [a163b3d6]sendExecuteMsg trigger event TRANSACTION
+2018-04-27 03:54:20.760 UTC [chaincode] processStream -> DEBU 97b [a163b3d6]Move state message TRANSACTION
+2018-04-27 03:54:20.760 UTC [chaincode] handleMessage -> DEBU 97c [a163b3d6]Fabric side Handling ChaincodeMessage of type: TRANSACTION in state ready
+2018-04-27 03:54:20.760 UTC [chaincode] filterError -> DEBU 97d Ignoring NoTransitionError: no transition
+2018-04-27 03:54:20.760 UTC [chaincode] processStream -> DEBU 97e [a163b3d6]sending state message TRANSACTION
+2018-04-27 03:54:20.760 UTC [shim] func1 -> DEBU 97f [a163b3d6]Received message TRANSACTION from shim
+2018-04-27 03:54:20.760 UTC [shim] handleMessage -> DEBU 980 [a163b3d6]Handling ChaincodeMessage of type: TRANSACTION(state:ready)
+2018-04-27 03:54:20.760 UTC [shim] beforeTransaction -> DEBU 981 [a163b3d6]Received TRANSACTION, invoking transaction on chaincode(Src:ready, Dst:ready)
+2018-04-27 03:54:20.761 UTC [shim] handleGetState -> DEBU 982 [a163b3d6]Sending GET_STATE
+2018-04-27 03:54:20.761 UTC [chaincode] processStream -> DEBU 983 [a163b3d6]Received message GET_STATE from shim
+2018-04-27 03:54:20.761 UTC [chaincode] handleMessage -> DEBU 984 [a163b3d6]Fabric side Handling ChaincodeMessage of type: GET_STATE in state ready
+2018-04-27 03:54:20.761 UTC [chaincode] afterGetState -> DEBU 985 [a163b3d6]Received GET_STATE, invoking get state from ledger
+2018-04-27 03:54:20.761 UTC [chaincode] filterError -> DEBU 986 Ignoring NoTransitionError: no transition
+2018-04-27 03:54:20.761 UTC [chaincode] func1 -> DEBU 987 [a163b3d6] getting state for chaincode lscc, key merculet-network, channel mychannel
+2018-04-27 03:54:20.761 UTC [statecouchdb] GetState -> DEBU 988 GetState(). ns=lscc, key=merculet-network
+2018-04-27 03:54:20.761 UTC [couchdb] ReadDoc -> DEBU 989 Entering ReadDoc()  id=[merculet-network]
+2018-04-27 03:54:20.761 UTC [couchdb] encodePathElement -> DEBU 98a Entering encodePathElement()  string=merculet-network
+2018-04-27 03:54:20.761 UTC [couchdb] encodePathElement -> DEBU 98b Exiting encodePathElement()  encodedStr=merculet-network
+2018-04-27 03:54:20.761 UTC [couchdb] handleRequest -> DEBU 98c Entering handleRequest()  method=GET  url=http://couchdb2:5984/mychannel_lscc/merculet-network?attachments=true
+2018-04-27 03:54:20.762 UTC [couchdb] handleRequest -> DEBU 98d HTTP Request: GET /mychannel_lscc/merculet-network?attachments=true HTTP/1.1 | Host: couchdb2:5984 | User-Agent: Go-http-client/1.1 | Accept: multipart/related | Accept-Encoding: gzip |  | 
+2018-04-27 03:54:21.090 UTC [couchdb] handleRequest -> DEBU 98e Couch DB Error:not_found,  Status Code:404,  Reason:missing
+2018-04-27 03:54:21.090 UTC [couchdb] ReadDoc -> DEBU 98f Document not found (404), returning nil value instead of 404 error
+2018-04-27 03:54:21.090 UTC [chaincode] func1 -> DEBU 990 [a163b3d6]No state associated with key: 
+merculet-network. Sending RESPONSE with an empty payload
+2018-04-27 03:54:21.090 UTC [chaincode] 1 -> DEBU 991 [a163b3d6]handleGetState serial send RESPONSE
+2018-04-27 03:54:21.090 UTC [shim] func1 -> DEBU 992 [a163b3d6]Received message RESPONSE from shim
+2018-04-27 03:54:21.090 UTC [shim] handleMessage -> DEBU 993 [a163b3d6]Handling ChaincodeMessage of type: RESPONSE(state:ready)
+2018-04-27 03:54:21.090 UTC [shim] sendChannel -> DEBU 994 [a163b3d6]before send
+2018-04-27 03:54:21.090 UTC [shim] sendChannel -> DEBU 995 [a163b3d6]after send
+2018-04-27 03:54:21.090 UTC [shim] afterResponse -> DEBU 996 [a163b3d6]Received RESPONSE, communicated (state:ready)
+2018-04-27 03:54:21.090 UTC [shim] handleGetState -> DEBU 997 [a163b3d6]GetState received payload RESPONSE
+2018-04-27 03:54:21.091 UTC [shim] handlePutState -> DEBU 998 [a163b3d6]Sending PUT_STATE
+2018-04-27 03:54:21.091 UTC [chaincode] processStream -> DEBU 999 [a163b3d6]Received message PUT_STATE from shim
+2018-04-27 03:54:21.091 UTC [chaincode] handleMessage -> DEBU 99a [a163b3d6]Fabric side Handling ChaincodeMessage of type: PUT_STATE in state ready
+2018-04-27 03:54:21.091 UTC [chaincode] filterError -> DEBU 99b Ignoring NoTransitionError: no transition
+2018-04-27 03:54:21.091 UTC [chaincode] func1 -> DEBU 99c [a163b3d6]state is ready
+2018-04-27 03:54:21.091 UTC [chaincode] func1 -> DEBU 99d [a163b3d6]Completed PUT_STATE. Sending RESPONSE
+2018-04-27 03:54:21.091 UTC [chaincode] 1 -> DEBU 99e [a163b3d6]enterBusyState trigger event RESPONSE
+2018-04-27 03:54:21.091 UTC [chaincode] processStream -> DEBU 99f [a163b3d6]Move state message RESPONSE
+2018-04-27 03:54:21.091 UTC [chaincode] handleMessage -> DEBU 9a0 [a163b3d6]Fabric side Handling ChaincodeMessage of type: RESPONSE in state ready
+2018-04-27 03:54:21.091 UTC [chaincode] filterError -> DEBU 9a1 Ignoring NoTransitionError: no transition
+2018-04-27 03:54:21.091 UTC [chaincode] processStream -> DEBU 9a2 [a163b3d6]sending state message RESPONSE
+2018-04-27 03:54:21.091 UTC [shim] func1 -> DEBU 9a3 [a163b3d6]Received message RESPONSE from shim
+2018-04-27 03:54:21.091 UTC [shim] handleMessage -> DEBU 9a4 [a163b3d6]Handling ChaincodeMessage of type: RESPONSE(state:ready)
+2018-04-27 03:54:21.091 UTC [shim] sendChannel -> DEBU 9a5 [a163b3d6]before send
+2018-04-27 03:54:21.091 UTC [shim] sendChannel -> DEBU 9a6 [a163b3d6]after send
+2018-04-27 03:54:21.091 UTC [shim] afterResponse -> DEBU 9a7 [a163b3d6]Received RESPONSE, communicated (state:ready)
+2018-04-27 03:54:21.091 UTC [shim] handlePutState -> DEBU 9a8 [a163b3d6]Received RESPONSE. Successfully updated state
+2018-04-27 03:54:21.091 UTC [lscc] putChaincodeCollectionData -> DEBU 9a9 No collection configuration specified
+2018-04-27 03:54:21.092 UTC [shim] func1 -> DEBU 9aa [a163b3d6]Transaction completed. Sending COMPLETED
+2018-04-27 03:54:21.092 UTC [shim] func1 -> DEBU 9ab [a163b3d6]Move state message COMPLETED
+2018-04-27 03:54:21.092 UTC [shim] handleMessage -> DEBU 9ac [a163b3d6]Handling ChaincodeMessage of type: COMPLETED(state:ready)
+2018-04-27 03:54:21.092 UTC [shim] func1 -> DEBU 9ad [a163b3d6]send state message COMPLETED
+2018-04-27 03:54:21.092 UTC [chaincode] processStream -> DEBU 9ae [a163b3d6]Received message COMPLETED from shim
+2018-04-27 03:54:21.092 UTC [chaincode] handleMessage -> DEBU 9af [a163b3d6]Fabric side Handling ChaincodeMessage of type: COMPLETED in state ready
+2018-04-27 03:54:21.092 UTC [chaincode] handleMessage -> DEBU 9b0 [a163b3d6f4b52ca8d4bf880f47e4a4723f3c4881efcd02791d31e36f5ca91114]HandleMessage- COMPLETED. Notify
+2018-04-27 03:54:21.092 UTC [chaincode] notify -> DEBU 9b1 notifying Txid:a163b3d6f4b52ca8d4bf880f47e4a4723f3c4881efcd02791d31e36f5ca91114, channelID:mychannel
+2018-04-27 03:54:21.092 UTC [chaincode] Execute -> DEBU 9b2 Exit
+2018-04-27 03:54:21.093 UTC [ccprovider] NewCCContext -> DEBU 9b3 NewCCCC (chain=mychannel,chaincode=merculet-network,version=0.0.1,txid=a163b3d6f4b52ca8d4bf880f47e4a4723f3c4881efcd02791d31e36f5ca91114,syscc=false,proposal=0xc4226b9130,canname=merculet-network:0.0.1
+2018-04-27 03:54:21.093 UTC [chaincode] Launch -> DEBU 9b4 launchAndWaitForRegister fetched 1234 bytes from file system
+2018-04-27 03:54:21.093 UTC [chaincode] launchAndWaitForRegister -> DEBU 9b5 chaincode merculet-network:0.0.1 is being launched
+2018-04-27 03:54:21.096 UTC [chaincode] getLaunchConfigs -> DEBU 9b6 Executable is /bin/sh
+2018-04-27 03:54:21.096 UTC [chaincode] getLaunchConfigs -> DEBU 9b7 Args [/bin/sh -c cd /usr/local/src; npm start -- --peer.address peer0.org2.example.com:7052]
+2018-04-27 03:54:21.096 UTC [chaincode] getLaunchConfigs -> DEBU 9b8 Envs [CORE_CHAINCODE_ID_NAME=merculet-network:0.0.1 CORE_PEER_TLS_ENABLED=true CORE_TLS_CLIENT_KEY_PATH=/etc/hyperledger/fabric/client.key CORE_TLS_CLIENT_CERT_PATH=/etc/hyperledger/fabric/client.crt CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/peer.crt CORE_CHAINCODE_LOGGING_LEVEL=info CORE_CHAINCODE_LOGGING_SHIM=warning CORE_CHAINCODE_LOGGING_FORMAT=%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}]
+2018-04-27 03:54:21.096 UTC [chaincode] getLaunchConfigs -> DEBU 9b9 FilesToUpload [/etc/hyperledger/fabric/client.key /etc/hyperledger/fabric/client.crt /etc/hyperledger/fabric/peer.crt]
+2018-04-27 03:54:21.096 UTC [chaincode] launch -> DEBU 9ba start container: merculet-network:0.0.1(networkid:dev,peerid:peer0.org2.example.com)
+2018-04-27 03:54:21.096 UTC [chaincode] launch -> DEBU 9bb start container with args: /bin/sh -c cd /usr/local/src; npm start -- --peer.address peer0.org2.example.com:7052
+2018-04-27 03:54:21.096 UTC [chaincode] launch -> DEBU 9bc start container with env:
+        CORE_CHAINCODE_ID_NAME=merculet-network:0.0.1
+        CORE_PEER_TLS_ENABLED=true
+        CORE_TLS_CLIENT_KEY_PATH=/etc/hyperledger/fabric/client.key
+        CORE_TLS_CLIENT_CERT_PATH=/etc/hyperledger/fabric/client.crt
+        CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/peer.crt
+        CORE_CHAINCODE_LOGGING_LEVEL=info
+        CORE_CHAINCODE_LOGGING_SHIM=warning
+        CORE_CHAINCODE_LOGGING_FORMAT=%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}
+2018-04-27 03:54:21.097 UTC [container] lockContainer -> DEBU 9bd waiting for container(dev-peer0.org2.example.com-merculet-network-0.0.1) lock
+2018-04-27 03:54:21.097 UTC [container] lockContainer -> DEBU 9be got container (dev-peer0.org2.example.com-merculet-network-0.0.1) lock
+2018-04-27 03:54:21.098 UTC [dockercontroller] Start -> DEBU 9bf Cleanup container dev-peer0.org2.example.com-merculet-network-0.0.1
+2018-04-27 03:54:21.099 UTC [dockercontroller] stopInternal -> DEBU 9c0 Stop container dev-peer0.org2.example.com-merculet-network-0.0.1(No such container: dev-peer0.org2.example.com-merculet-network-0.0.1)
+2018-04-27 03:54:21.100 UTC [dockercontroller] stopInternal -> DEBU 9c1 Kill container dev-peer0.org2.example.com-merculet-network-0.0.1 (No such container: dev-peer0.org2.example.com-merculet-network-0.0.1)
+2018-04-27 03:54:21.101 UTC [dockercontroller] stopInternal -> DEBU 9c2 Remove container dev-peer0.org2.example.com-merculet-network-0.0.1 (No such container: dev-peer0.org2.example.com-merculet-network-0.0.1)
+2018-04-27 03:54:21.102 UTC [dockercontroller] Start -> DEBU 9c3 Start container dev-peer0.org2.example.com-merculet-network-0.0.1
+2018-04-27 03:54:21.102 UTC [dockercontroller] createContainer -> DEBU 9c4 Create container: dev-peer0.org2.example.com-merculet-network-0.0.1
+2018-04-27 03:54:21.124 UTC [dockercontroller] Start -> DEBU 9c5 start-could not find image <dev-peer0.org2.example.com-merculet-network-0.0.1-ec7b9efaab15fd34f7713e30b2beef91376a47271bf83ebe2386a7ade805758b> (container id <dev-peer0.org2.example.com-merculet-network-0.0.1>), because of <no such image>...attempt to recreate image
+2018-04-27 03:54:21.126 UTC [chaincode-platform] generateDockerfile -> DEBU 9c6 
+FROM hyperledger/fabric-baseimage:x86_64-0.4.6
+ADD binpackage.tar /usr/local/src
+LABEL org.hyperledger.fabric.chaincode.id.name="merculet-network" \
+      org.hyperledger.fabric.chaincode.id.version="0.0.1" \
+      org.hyperledger.fabric.chaincode.type="NODE" \
+      org.hyperledger.fabric.version="1.1.1-snapshot-ee484f8" \
+      org.hyperledger.fabric.base.version="0.4.6"
+ENV CORE_CHAINCODE_BUILDLEVEL=1.1.1-snapshot-ee484f8
+2018-04-27 03:54:21.135 UTC [util] DockerBuild -> DEBU 9c7 Attempting build with image hyperledger/fabric-ccenv:x86_64-1.1.1-snapshot-ee484f8
+XQ2018-04-27 03:59:21.095 UTC [chaincode] launchAndWaitForRegister -> DEBU 9c8 stopping due to error while launching: timeout expired while starting chaincode merculet-network:0.0.1(networkid:dev,peerid:peer0.org2.example.com,tx:a163b3d6f4b52ca8d4bf880f47e4a4723f3c4881efcd02791d31e36f5ca91114)
+github.com/hyperledger/fabric/core/chaincode.(*ChaincodeSupport).launchAndWaitForRegister
+        /opt/gopath/src/github.com/hyperledger/fabric/core/chaincode/chaincode_support.go:569
+github.com/hyperledger/fabric/core/chaincode.(*ChaincodeSupport).Launch
+        /opt/gopath/src/github.com/hyperledger/fabric/core/chaincode/chaincode_support.go:731
+github.com/hyperledger/fabric/core/chaincode.Execute
+        /opt/gopath/src/github.com/hyperledger/fabric/core/chaincode/exectransaction.go:45
+github.com/hyperledger/fabric/core/endorser.(*SupportImpl).Execute
+        /opt/gopath/src/github.com/hyperledger/fabric/core/endorser/support.go:83
+github.com/hyperledger/fabric/core/endorser.(*Endorser).callChaincode
+        /opt/gopath/src/github.com/hyperledger/fabric/core/endorser/endorser.go:164
+github.com/hyperledger/fabric/core/endorser.(*Endorser).simulateProposal
+        /opt/gopath/src/github.com/hyperledger/fabric/core/endorser/endorser.go:265
+github.com/hyperledger/fabric/core/endorser.(*Endorser).ProcessProposal
+        /opt/gopath/src/github.com/hyperledger/fabric/core/endorser/endorser.go:491
+github.com/hyperledger/fabric/core/handlers/auth/filter.(*expirationCheckFilter).ProcessProposal
+        /opt/gopath/src/github.com/hyperledger/fabric/core/handlers/auth/filter/expiration.go:61
+github.com/hyperledger/fabric/core/handlers/auth/filter.(*filter).ProcessProposal
+        /opt/gopath/src/github.com/hyperledger/fabric/core/handlers/auth/filter/filter.go:31
+github.com/hyperledger/fabric/protos/peer._Endorser_ProcessProposal_Handler
+        /opt/gopath/src/github.com/hyperledger/fabric/protos/peer/peer.pb.go:112
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).processUnaryRPC
+        /opt/gopath/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:781
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).handleStream
+        /opt/gopath/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:981
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).serveStreams.func1.1
+        /opt/gopath/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:551
+runtime.goexit
+        /opt/go/src/runtime/asm_amd64.s:2337

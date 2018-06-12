@@ -1,0 +1,16 @@
+[kevin@devops-cn merculet-network]$ composer network start -c PeerAdmin@byfn-network-org1 -n trade-network -V 0.0.1 -o endorsementPolicyFile=/tmp/composer/endorsement-policy.json -A alice -C alice/admin-pub.pem -A bob -C bob/admin-pub.pem
+Starting business network trade-network at version 0.0.1
+
+Processing these Network Admins: 
+        userName: alice
+        userName: bob
+
+⠼ Starting business network definition. This may take a minute...
+⠴ Starting business network definition. This may take a minute...
+✖ Starting business network definition. This may take a minute...
+Error: Error trying to start business network. Error: No valid responses from any peers.
+Response from attempted peer comms was an error: Error: REQUEST_TIMEOUT
+Response from attempted peer comms was an error: Error: REQUEST_TIMEOUT
+Response from attempted peer comms was an error: Error: REQUEST_TIMEOUT
+Response from attempted peer comms was an error: Error: REQUEST_TIMEOUT
+Command failed

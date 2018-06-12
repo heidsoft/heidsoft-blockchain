@@ -1,0 +1,40 @@
+2018-04-28 10:00:39.844 UTC [dockercontroller] Start -> DEBU 959e start-could not find image <dev-peer0.org1-merculet-network-0.0.5-e291a1f14a0bb8c7ea49683cf4f0089fa13b6acd977d68e29634b48229a9bc43> (container id <dev-peer0.org1-merculet-network-0.0.5>), because of <no such image>...attempt to recreate image
+2018-04-28 10:00:39.845 UTC [chaincode-platform] generateDockerfile -> DEBU 959f 
+FROM hyperledger/fabric-baseimage:x86_64-0.4.6
+ADD binpackage.tar /usr/local/src
+LABEL org.hyperledger.fabric.chaincode.id.name="merculet-network" \
+      org.hyperledger.fabric.chaincode.id.version="0.0.5" \
+      org.hyperledger.fabric.chaincode.type="NODE" \
+      org.hyperledger.fabric.version="1.1.0" \
+      org.hyperledger.fabric.base.version="0.4.6"
+ENV CORE_CHAINCODE_BUILDLEVEL=1.1.0
+2018-04-28 10:00:39.846 UTC [util] DockerBuild -> DEBU 95a0 Attempting build with image hyperledger/fabric-ccenv:x86_64-1.1.0
+2018-04-28 10:05:39.841 UTC [chaincode] launchAndWaitForRegister -> DEBU 95a1 stopping due to error while launching: timeout expired while starting chaincode merculet-network:0.0.5(networkid:dev,peerid:peer0.org1,tx:2925f644498d0abd0d7e62977f89d865a04aa483732e12288be036141febd88e)
+github.com/hyperledger/fabric/core/chaincode.(*ChaincodeSupport).launchAndWaitForRegister
+        /opt/gopath/src/github.com/hyperledger/fabric/core/chaincode/chaincode_support.go:569
+github.com/hyperledger/fabric/core/chaincode.(*ChaincodeSupport).Launch
+        /opt/gopath/src/github.com/hyperledger/fabric/core/chaincode/chaincode_support.go:731
+github.com/hyperledger/fabric/core/chaincode.Execute
+        /opt/gopath/src/github.com/hyperledger/fabric/core/chaincode/exectransaction.go:45
+github.com/hyperledger/fabric/core/endorser.(*SupportImpl).Execute
+        /opt/gopath/src/github.com/hyperledger/fabric/core/endorser/support.go:83
+github.com/hyperledger/fabric/core/endorser.(*Endorser).callChaincode
+        /opt/gopath/src/github.com/hyperledger/fabric/core/endorser/endorser.go:164
+github.com/hyperledger/fabric/core/endorser.(*Endorser).simulateProposal
+        /opt/gopath/src/github.com/hyperledger/fabric/core/endorser/endorser.go:265
+github.com/hyperledger/fabric/core/endorser.(*Endorser).ProcessProposal
+        /opt/gopath/src/github.com/hyperledger/fabric/core/endorser/endorser.go:491
+github.com/hyperledger/fabric/core/handlers/auth/filter.(*expirationCheckFilter).ProcessProposal
+        /opt/gopath/src/github.com/hyperledger/fabric/core/handlers/auth/filter/expiration.go:61
+github.com/hyperledger/fabric/core/handlers/auth/filter.(*filter).ProcessProposal
+        /opt/gopath/src/github.com/hyperledger/fabric/core/handlers/auth/filter/filter.go:31
+github.com/hyperledger/fabric/protos/peer._Endorser_ProcessProposal_Handler
+        /opt/gopath/src/github.com/hyperledger/fabric/protos/peer/peer.pb.go:112
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).processUnaryRPC
+        /opt/gopath/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:781
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).handleStream
+        /opt/gopath/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:981
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).serveStreams.func1.1
+        /opt/gopath/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:551
+runtime.goexit
+        /opt/go/src/runtime/asm_amd64.s:2337
